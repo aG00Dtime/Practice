@@ -1,6 +1,6 @@
 import random
 
-
+# player
 class Player:
     """this contains the player attributes and damage """
 
@@ -11,12 +11,14 @@ class Player:
         self.defense = defense
         self.buffs = buffs
 
+    # player damage calc
     def damage(self):
         tot_attack = self.attack * self.buffs
         player_damage = random.randrange(tot_attack / 2, tot_attack + 1)
         return player_damage
 
 
+# monster
 class Monster:
     """ monster related attributes and damage """
 
@@ -25,6 +27,7 @@ class Monster:
         self.health = health
         self.defense = defense
 
+    # monster damage calc
     def damage(self):
         normal_monster_damage = self.attack * 1
         return normal_monster_damage
